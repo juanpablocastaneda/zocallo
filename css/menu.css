@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.container {
+	width: 740px;
+	position: relative;
+	float:left;
+	margin-left:15px;
+}
+#header {
+	/*background: url(header_bg.gif) no-repeat center top;*/
+}
+ul.menu {
+	list-style: none;
+	padding: 15px 10px;
+	float: left;
+	width: 735px;
+	font-size: 1.2em;
+	height:30px;
+	/*background-image: url(../images_menu/bg_menu.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;*/
+	font-family:Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal
+}
+.dash {
+	border-right-width: thin;
+	border-right-style: dashed;
+	border-right-color: #565656;
+}
+
+.dashr {
+	border-left-width: thin;
+	border-left-style: dashed;
+	border-left-color: #565656;
+	border-right-width: thin;
+	border-right-style: dashed;
+	border-right-color: #565656;
+}
+ul.menu li {
+	float: left;
+	margin: 0;
+	padding: 0 10px 0 10px;
+	position: relative;
+}
+ul.menu li a{
+	padding: 10px 5px;
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	float: left;
+}
+ul.menu li a:hover{
+	/*background: url(topnav_hover.gif) no-repeat center top;*/
+}
+
+ul.menu li .indicador a:hover{
+	background: url(../images_menu/topnav_hover.gif) no-repeat center top;
+}
+
+ul.menu li span { 
+	width: 20px;
+	height: 20px;
+	float: left;
+	background: url(../images_menu/subnav_btn.gif) no-repeat center top;
+}
+/*ul.menu li span.subhover {background-position: center bottom; cursor: pointer;} */
+ul.menu li ul.submenu {
+	list-style: none;
+	position: absolute; 
+	left: 0; top: 35px;
+	background: #fff;
+	margin-top: 0; padding: 0;
+	display: none;
+	float: left;
+	width: 150px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	/*border: 1px solid #111;*/
+	padding-top:15px;
+	background: url(../images_menu/subnav_indicador.png) no-repeat left top;
+}
+ul.menu li ul.submenu li{
+	margin: 0; padding: 0;
+	border-top: 1px solid #252525; 
+	border-bottom: 1px solid #444; 
+	clear: both;
+	width: 150px;
+}
+html ul.menu li ul.submenu li a {
+	float: left;
+	width: 125px;
+	background: #333 url(../images_menu/dropdown_linkbg.gif) no-repeat 10px center;
+	padding-left: 20px;
+	color:#cccccc;
+}
+html ul.menu li ul.submenu li a:hover { 
+	background: #222 url(../images_menu/dropdown_linkbg_over.gif) no-repeat 10px center; 
+	color:#f58026;
+}
+#header img {
+	margin: 20px 0 10px;
+}

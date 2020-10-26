@@ -92,7 +92,7 @@
 
           <?php
           include("phpmailer.php");
-          $smtp=new PHPMailer();
+          $smtp = new PHPMailer();
           $smtp->IsSMTP();
           $smtp->SMTPAuth = true;
           $smtp->SMTPSecure = "tls";
@@ -129,8 +129,8 @@
             } else {
               $smtp->Subject = "Mensaje página de contacto zocallo.com/contacto ";
               $smtp->AddAddress("contacto@zocallo.com", $name);
-              if($smtp->Send())
-              {
+              $smtp->AddAddress("tammer@m4b.digital", $name);
+              if ($smtp->Send()) {
                 echo "<a href=\"\">Mensaje enviado, gracias, nos pondremos en contacto en breve.</a>";
               }
             }

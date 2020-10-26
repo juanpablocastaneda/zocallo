@@ -122,8 +122,9 @@
             $email = $_REQUEST['email'];
             $phone = $_REQUEST['phone'];
             $message = $_REQUEST['message'];
-            $smtp->AltBody = sprintf("%s \n %s \n %s \n %s \n", $name, $email, $phone, $message);
-            $smtp->MsgHTML(sprintf("%s \n %s \n %s \n %s \n", $name, $email, $phone, $message));
+            $bodie = " Email: " . $email . " Teléfono: " . $phone . " Mensaje: " . $message;
+            $smtp->AltBody = sprintf("%s \n %s \n %s \n %s \n", $bodie);
+            $smtp->MsgHTML(sprintf("%s \n %s \n %s \n %s \n", $bodie));
             if (($name == "") || ($email == "") || ($phone == "") || ($message == "")) {
               echo "Todos los campos son necesarios, por favor completa la información del <a href=\"\">formulario</a> para responder tu solicitud de una mejor manera. Gracias por tu comprensión.";
             } else {
